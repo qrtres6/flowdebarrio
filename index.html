@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Flow de Barrio · Barber Shop</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0A0807">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Flow de Barrio">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cinzel:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0A0807; --surface: #14110D; --surface2: #1E1A14; --line: #3A3022;
+    --text: #F5EDD8; --textDim: #B8A578; --textMute: #7A6B4F;
+    --gold: #D4A857; --red: #D63B3B; --blue: #1E5CB3;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: 'Inter', system-ui, sans-serif; min-height: 100vh; -webkit-font-smoothing: antialiased; }
+  body {
+    background:
+      radial-gradient(circle at 50% -10%, rgba(212,168,87,0.12), transparent 50%),
+      radial-gradient(circle at 90% 110%, rgba(214,59,59,0.06), transparent 50%),
+      var(--bg);
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; min-height: 100vh; display: flex; flex-direction: column; }
+  .logo-wrap { text-align: center; margin: 24px 0 8px; }
+  .logo-wrap img { width: 100%; max-width: 320px; height: auto; }
+  .stripe { width: 220px; height: 8px; margin: 0 auto 28px; border-radius: 4px;
+    background: repeating-linear-gradient(135deg, var(--red) 0 14px, #F5EDD8 14px 28px, var(--blue) 28px 42px, #F5EDD8 42px 56px);
+  }
+  .eyebrow { font-size: 11px; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; font-weight: 700; text-align: center; }
+  h1 { font-family: 'Cinzel', serif; font-weight: 700; font-size: 26px; text-align: center; margin: 8px 0 32px; letter-spacing: 0.06em; color: var(--text); }
+  .grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+  @media (min-width: 640px) { .grid { grid-template-columns: 1fr 1fr; } }
+  .card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
+    padding: 22px; display: flex; flex-direction: column; gap: 10px; text-decoration: none; color: inherit;
+    transition: all 200ms ease; min-height: 180px;
+  }
+  .card:hover, .card:active { border-color: var(--gold); transform: translateY(-2px); }
+  .card .iconbox { width: 48px; height: 48px; border-radius: 12px; background: rgba(212,168,87,0.14); display: flex; align-items: center; justify-content: center; }
+  .card h3 { font-family: 'Cinzel', serif; font-weight: 700; font-size: 20px; margin: 4px 0 0; letter-spacing: 0.04em; color: var(--gold); }
+  .card p { font-size: 13px; line-height: 1.5; color: var(--textDim); margin: 0; flex: 1; }
+  .card .arrow { color: var(--gold); font-size: 20px; align-self: flex-end; }
+  #install-btn {
+    margin-top: 24px; padding: 14px 20px; border-radius: 10px; background: var(--gold); color: var(--bg);
+    border: none; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase;
+    cursor: pointer; display: none; font-family: inherit;
+  }
+  #install-btn.show { display: block; }
+  .footer { text-align: center; margin-top: auto; padding-top: 32px; font-size: 11px; color: var(--textMute); letter-spacing: 1px; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="logo-wrap"><img src="logo-v2.png" alt="Flow de Barrio"></div>
+  <div class="stripe"></div>
+  <div class="eyebrow">Sistema de gestión</div>
+  <h1>Elegí cómo entrar</h1>
+
+  <div class="grid">
+    <a class="card" href="cobro.html">
+      <div class="iconbox">
+        <svg viewBox="0 0 32 32" width="26" height="26" fill="none" stroke="#D4A857" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="9" r="3.2"/><circle cx="8" cy="23" r="3.2"/><path d="M10.5 11l16 11M10.5 21l16-11"/></svg>
+      </div>
+      <h3>Cobro</h3>
+      <p>Pantalla del empleado. Iniciar turno, cobrar servicios y cerrar caja.</p>
+      <span class="arrow">→</span>
+    </a>
+    <a class="card" href="admin.html">
+      <div class="iconbox">
+        <svg viewBox="0 0 32 32" width="26" height="26" fill="none" stroke="#D4A857" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 27V5M5 27h22"/><path d="M9 22v-6M14 22v-12M19 22v-8M24 22v-14"/></svg>
+      </div>
+      <h3>Admin</h3>
+      <p>Configuración, empleados, comisiones, gastos y reportes.</p>
+      <span class="arrow">→</span>
+    </a>
+  </div>
+
+  <button id="install-btn">📲 Instalar app en este dispositivo</button>
+
+  <div class="footer">FLOW DE BARRIO · BARBER SHOP</div>
+</div>
+
+<script>
+  // PWA install prompt
+  let deferred;
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferred = e;
+    document.getElementById('install-btn').classList.add('show');
+  });
+  document.getElementById('install-btn').addEventListener('click', async () => {
+    if (!deferred) return;
+    deferred.prompt();
+    const { outcome } = await deferred.userChoice;
+    if (outcome === 'accepted') document.getElementById('install-btn').classList.remove('show');
+    deferred = null;
+  });
+  // Service worker
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(()=>{}));
+  }
+</script>
+</body>
+</html>
