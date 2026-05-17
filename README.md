@@ -1,42 +1,67 @@
 # Flow de Barrio · Barber Shop
 
-App de cobro y gestión para Flow de Barrio.
+App de cobro y gestión para Flow de Barrio, hecha con **Vite + React** y
+**Supabase** para sincronizar los datos entre dispositivos.
 
-## Cómo subirlo a internet (paso a paso)
+- **Inicio** (`/`) — elegís entrar a Cobro o Admin.
+- **Cobro** (`/cobro`) — pantalla del empleado: iniciar turno, cobrar servicios y cerrar caja.
+- **Admin** (`/admin`) — panel del dueño: panel, reportes, gastos, servicios, empleados y configuración.
 
-### 1. Subir el código a GitHub
-1. Andá a [github.com/new](https://github.com/new) (logueate con `qrtres6`)
-2. Nombre del repo: `flow-de-barrio`
-3. Que sea **Public**
-4. NO marques "Add README"
-5. Clic en **Create repository**
+Es una **PWA**: se puede instalar en el celular como una app más.
 
-### 2. Subir los archivos
-Te aparece una pantalla con instrucciones. La opción más fácil:
-- Clic en **"uploading an existing file"** (link azul en el medio)
-- Arrastrá TODOS los archivos de este proyecto al recuadro
-- Abajo, "Commit changes"
+## Cómo correrlo en tu compu
 
-### 3. Conectar Vercel (gratis, sin tarjeta)
-1. Andá a [vercel.com/signup](https://vercel.com/signup)
-2. Clic en **"Continue with GitHub"** (con `qrtres6`)
-3. Una vez adentro: **Add New** → **Project**
-4. Buscá `flow-de-barrio` → **Import**
-5. Dejá todo como viene → **Deploy**
-6. Esperá 30 segundos. Te da una URL tipo `flow-de-barrio.vercel.app`
+```bash
+npm install
+npm run dev      # abre http://localhost:5173
+npm run build    # genera la carpeta dist/ para publicar
+```
 
-### 4. Probar en el celular
-1. Abrí la URL en Chrome del celular
-2. Te sale un cartel "Instalar app" (o menú ⋮ → "Instalar"/"Agregar a pantalla de inicio")
-3. ✅ Listo, aparece como una app más en el celu
+## Subirlo a internet (Vercel)
 
-## Archivos importantes
-- `index.html` — pantalla de inicio (Cobro / Admin)
-- `cobro.html` — app del empleado
-- `admin.html` — panel del dueño
-- `manifest.webmanifest` — config para que sea instalable
-- `sw.js` — service worker (funciona offline)
+1. Subí este repo a GitHub.
+2. Entrá a [vercel.com](https://vercel.com) → **Add New → Project** → importá el repo.
+3. Vercel detecta Vite solo. Dejá todo como viene y **Deploy**.
+4. En unos segundos te da una URL tipo `flow-de-barrio.vercel.app`.
+
+## Sincronizar datos entre celulares (Supabase)
+
+Sin esto, la app funciona igual pero los datos quedan **solo en cada
+dispositivo**. Para que el cobro y el admin compartan la misma información:
+
+1. Creá una cuenta gratis en [supabase.com](https://supabase.com) y un proyecto nuevo.
+2. En el proyecto: **SQL Editor → New query**, pegá el contenido de
+   [`supabase/schema.sql`](supabase/schema.sql) y apretá **Run**.
+3. En **Settings → API** copiá el **Project URL** y la **anon public key**.
+4. Cargá esos dos valores como variables de entorno:
+   - En local: copiá `.env.example` como `.env` y completalo.
+   - En Vercel: **Settings → Environment Variables**, agregá
+     `VITE_SUPABASE_URL` y `VITE_SUPABASE_ANON_KEY`, y volvé a deployar.
+
+El indicador de la barra superior muestra el estado: *Sincronizado*,
+*Sincronizando…*, *Sin conexión* o *Solo este dispositivo*.
+
+> **Nota de seguridad:** la app no tiene login de usuarios; usa la clave
+> pública (anon key) y una sola fila compartida. Es práctico para una
+> peluquería, pero la contraseña de admin se guarda dentro de esa fila.
+> Cambiá la contraseña por defecto (`flow2026`) desde **Admin → Configuración**.
+
+## Estructura del proyecto
+
+```
+index.html            entrada de Vite
+src/
+  main.jsx            router (/, /cobro, /admin)
+  pages/              Home, Cobro, Admin
+  components/         SyncBadge
+  lib/                store, supabase, theme, icons, formatos, constantes
+public/               iconos, logos, manifest.webmanifest, sw.js
+supabase/schema.sql   tabla para Supabase
+design-handoff/       prototipo estático original (referencia de diseño)
+```
 
 ## Estado actual
-✅ PWA instalable
-⏳ Datos solo en este celu (próximo paso: Supabase)
+
+- ✅ PWA instalable
+- ✅ Cobro, Admin y reportes funcionando
+- ✅ Sincronización opcional con Supabase (tiempo real entre dispositivos)
