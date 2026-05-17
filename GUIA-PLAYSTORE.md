@@ -1,4 +1,4 @@
-# Subir Flow de Barrio a Google Play Store
+# Subir BarberPro a Google Play Store
 
 Esta guía te lleva paso a paso. La app es una **PWA**: para que aparezca en
 Play Store hay que envolverla en una app Android (una "TWA"). Usamos
@@ -18,11 +18,11 @@ La app tiene que estar online con una dirección `https://`.
 1. Subí este proyecto a GitHub (si todavía no lo hiciste).
 2. Entrá a [vercel.com](https://vercel.com) → **Add New → Project** → importá el repo.
 3. Dejá todo como viene → **Deploy**.
-4. Vercel te da una URL, por ejemplo `https://flowdebarrio.vercel.app`.
+4. Vercel te da una URL, por ejemplo `https://barberpro.vercel.app`.
 
 📌 **Anotá esa URL.** La vas a usar en todos los pasos siguientes.
 
-> Si querés un dominio propio (ej. `flowdebarrio.com.ar`), configuralo ahora
+> Si querés un dominio propio (ej. `barberpro.com.ar`), configuralo ahora
 > en Vercel → Settings → Domains. Cambiar el dominio **después** de publicar
 > en Play Store obliga a regenerar el paquete.
 
@@ -36,9 +36,9 @@ La app tiene que estar online con una dirección `https://`.
    instalable (el manifiesto y el service worker ya están listos en este repo).
 4. Apretá **Package For Stores** → tarjeta **Android** → **Generate Package**.
 5. En la ventana de opciones:
-   - **Package ID**: dejá el que sugiere (algo como `app.vercel.flowdebarrio`).
+   - **Package ID**: dejá el que sugiere (algo como `app.vercel.barberpro`).
      📌 **Anotalo**, lo vas a necesitar en el Paso 3.
-   - **App name**: `Flow de Barrio`
+   - **App name**: `BarberPro`
    - **Signing key**: dejá **"Create new"** (PWABuilder crea la clave de firma).
 6. Descargá el `.zip`.
 
@@ -80,7 +80,7 @@ Esto hace que la app abra a pantalla completa, sin la barra del navegador.
 ## Paso 5 · Subir la app a Play Console
 
 1. En Play Console: **Crear app**.
-   - Nombre: `Flow de Barrio`
+   - Nombre: `BarberPro`
    - Idioma: Español
    - Tipo: App · Gratis
 2. Menú lateral → **Producción** → **Crear nueva versión**.

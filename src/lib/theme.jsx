@@ -5,7 +5,7 @@ const THEME_KEY = 'tijera.theme.v1';
 
 export const THEMES = {
   flow: {
-    id: 'flow', name: 'Flow de Barrio', sub: 'Vintage gótico',
+    id: 'flow', name: 'Clásico', sub: 'Vintage gótico',
     font: "'Cinzel', 'Playfair Display', Georgia, serif",
     fontBody: "'Inter', system-ui, sans-serif",
     mono: "'Roboto Mono', monospace",
@@ -16,7 +16,7 @@ export const THEMES = {
     red: '#D63B3B', blue: '#1E5CB3', white: '#F5EDD8', gold: '#D4A857',
     green: '#7DBB6E',
     radius: 8, radiusSm: 6, radiusXs: 4, radiusPill: 999,
-    logo: '/logo-v2.png',
+    logo: '/logo.svg',
     barberStripe: true,
     serifTitle: true,
     titleTransform: 'uppercase',

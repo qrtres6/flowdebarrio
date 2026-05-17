@@ -1,7 +1,7 @@
 // Default data + static catalogs.
 
 export const DEFAULT_STATE = {
-  shopName: 'Flow de Barrio',
+  shopName: 'Mi Barbería',
   adminPassword: 'flow2026',
   services: [
     { id: 's1', name: 'Corte clásico', price: 6000, icon: 'scissors' },

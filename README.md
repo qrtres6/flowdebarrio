@@ -1,6 +1,6 @@
-# Flow de Barrio · Barber Shop
+# BarberPro · Gestión para barberías
 
-App de cobro y gestión para Flow de Barrio, hecha con **Vite + React** y
+App de cobro y gestión para barberías, hecha con **Vite + React** y
 **Supabase** para sincronizar los datos entre dispositivos.
 
 - **Inicio** (`/`) — elegís entrar a Cobro o Admin.
@@ -22,7 +22,7 @@ npm run build    # genera la carpeta dist/ para publicar
 1. Subí este repo a GitHub.
 2. Entrá a [vercel.com](https://vercel.com) → **Add New → Project** → importá el repo.
 3. Vercel detecta Vite solo. Dejá todo como viene y **Deploy**.
-4. En unos segundos te da una URL tipo `flow-de-barrio.vercel.app`.
+4. En unos segundos te da una URL tipo `barberpro.vercel.app`.
 
 ## Sincronizar datos entre celulares (Supabase)
 
@@ -43,8 +43,16 @@ El indicador de la barra superior muestra el estado: *Sincronizado*,
 
 > **Nota de seguridad:** la app no tiene login de usuarios; usa la clave
 > pública (anon key) y una sola fila compartida. Es práctico para una
-> peluquería, pero la contraseña de admin se guarda dentro de esa fila.
+> barbería, pero la contraseña de admin se guarda dentro de esa fila.
 > Cambiá la contraseña por defecto (`flow2026`) desde **Admin → Configuración**.
+
+## La marca
+
+- **BarberPro** es el producto (la app).
+- Cada barbería que la use carga su propio nombre en **Admin → Configuración**.
+- El logo y los íconos se generan desde [`brand/icon.svg`](brand/icon.svg) y
+  [`public/logo.svg`](public/logo.svg). Para regenerar los PNG:
+  `npm i -D sharp && node brand/render-icons.mjs`.
 
 ## Estructura del proyecto
 
@@ -55,7 +63,8 @@ src/
   pages/              Home, Cobro, Admin
   components/         SyncBadge
   lib/                store, supabase, theme, icons, formatos, constantes
-public/               iconos, logos, manifest.webmanifest, sw.js
+public/               íconos, logo.svg, manifest.webmanifest, sw.js
+brand/                fuentes de la marca (icon.svg + script de íconos)
 supabase/schema.sql   tabla para Supabase
 design-handoff/       prototipo estático original (referencia de diseño)
 ```

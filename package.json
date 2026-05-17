@@ -1,9 +1,9 @@
 {
-  "name": "flow-de-barrio",
+  "name": "barberpro",
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Cobro y gestión para Flow de Barrio · Barber Shop",
+  "description": "BarberPro · Gestión para barberías: cobro, comisiones, gastos y reportes",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.1",
+    "sharp": "^0.34.5",
     "vite": "^5.4.8"
   }
 }

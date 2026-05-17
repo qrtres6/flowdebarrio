@@ -81,19 +81,22 @@ export default function Home() {
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cinzel:wght@500;700;900&display=swap" rel="stylesheet" />
 
       <div style={{ maxWidth: 720, margin: '0 auto', padding: '32px 20px 64px', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-        <div style={{ textAlign: 'center', margin: '24px 0 8px' }}>
-          <img src="/logo-v2.png" alt="Flow de Barrio" style={{ width: '100%', maxWidth: 320, height: 'auto' }} />
+        <div style={{ textAlign: 'center', margin: '28px 0 0' }}>
+          <img src="/logo.svg" alt="BarberPro" style={{ width: 84, height: 'auto' }} />
+        </div>
+        <h1 style={{ fontFamily: "'Cinzel', serif", fontWeight: 700, fontSize: 42, textAlign: 'center', margin: '10px 0 2px', letterSpacing: '0.08em', color: C.gold }}>
+          BarberPro
+        </h1>
+        <div style={{ fontSize: 12, letterSpacing: 3, color: C.textDim, textTransform: 'uppercase', fontWeight: 600, textAlign: 'center' }}>
+          Gestión para barberías
         </div>
         <div
           style={{
-            width: 220, height: 8, margin: '0 auto 28px', borderRadius: 4,
+            width: 220, height: 8, margin: '22px auto 30px', borderRadius: 4,
             background: `repeating-linear-gradient(135deg, ${C.red} 0 14px, #F5EDD8 14px 28px, ${C.blue} 28px 42px, #F5EDD8 42px 56px)`,
           }}
         />
-        <div style={{ fontSize: 11, letterSpacing: 3, color: C.gold, textTransform: 'uppercase', fontWeight: 700, textAlign: 'center' }}>
-          Sistema de gestión
-        </div>
-        <h1 style={{ fontFamily: "'Cinzel', serif", fontWeight: 700, fontSize: 26, textAlign: 'center', margin: '8px 0 32px', letterSpacing: '0.06em', color: C.text }}>
+        <h1 style={{ fontFamily: "'Cinzel', serif", fontWeight: 700, fontSize: 26, textAlign: 'center', margin: '0 0 32px', letterSpacing: '0.06em', color: C.text }}>
           Elegí cómo entrar
         </h1>
 
@@ -116,7 +119,7 @@ export default function Home() {
         )}
 
         <div style={{ textAlign: 'center', marginTop: 'auto', paddingTop: 32, fontSize: 11, color: C.textMute, letterSpacing: 1 }}>
-          FLOW DE BARRIO · BARBER SHOP
+          BARBERPRO · GESTIÓN PARA BARBERÍAS
         </div>
       </div>
     </div>

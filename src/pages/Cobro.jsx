@@ -191,7 +191,7 @@ function Topbar({ employee, employees, setEmpId, openShifts, openShift, totals, 
         )}
         <div>
           <div style={{ fontSize: 10, color: TH.textMute, letterSpacing: 2, textTransform: 'uppercase', fontWeight: 600 }}>Cobro</div>
-          <div className="th-title" style={{ fontSize: 14, fontWeight: 700, color: TH.accent, letterSpacing: '0.08em' }}>Barber shop</div>
+          <div className="th-title" style={{ fontSize: 14, fontWeight: 700, color: TH.accent, letterSpacing: '0.08em' }}>BarberPro</div>
         </div>
       </div>
 

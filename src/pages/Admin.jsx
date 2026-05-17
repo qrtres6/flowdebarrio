@@ -102,7 +102,7 @@ function Sidebar({ tab, setTab }) {
         <div style={{ minWidth: 0, flex: 1 }}>
           <div style={{ fontSize: 10, color: TH.textMute, letterSpacing: 2, textTransform: 'uppercase', fontWeight: 600 }}>Admin</div>
           <div className="th-title" style={{ fontSize: 14, fontWeight: 700, color: TH.accent, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', letterSpacing: '0.06em' }}>
-            Flow de Barrio
+            BarberPro
           </div>
         </div>
       </div>
@@ -1262,7 +1262,7 @@ function AdminLogin({ TH: th, adminPassword, onOk }) {
         }}
       >
         <style>{`@keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-8px)} 75%{transform:translateX(8px)} }`}</style>
-        <img src="/logo-v2.png" alt="logo" style={{ width: 110, height: 'auto' }} />
+        <img src="/logo.svg" alt="BarberPro" style={{ width: 64, height: 'auto' }} />
         <div style={{ textAlign: 'center' }}>
           <div style={{ fontSize: 10, letterSpacing: 3, color: th.textMute, fontWeight: 700, textTransform: 'uppercase' }}>Acceso restringido</div>
           <div className="th-title" style={{ fontSize: 20, fontWeight: 700, color: th.accent, marginTop: 6, letterSpacing: '0.06em' }}>Panel de admin</div>

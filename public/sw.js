@@ -1,12 +1,12 @@
-// sw.js — service worker para Flow de Barrio (PWA)
+// sw.js — service worker para BarberPro (PWA)
 // Network-first para navegación (para que se vean las actualizaciones),
 // cache-first para el resto de los assets.
 
-const CACHE_NAME = 'flow-barrio-v2';
+const CACHE_NAME = 'barberpro-v1';
 const CORE = [
   '/',
   '/manifest.webmanifest',
-  '/logo-v2.png',
+  '/logo.svg',
   '/icon-192.png',
   '/icon-512.png',
   '/apple-touch-icon.png',

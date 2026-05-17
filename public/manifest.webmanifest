@@ -1,8 +1,8 @@
 {
   "id": "/",
-  "name": "Flow de Barrio · Barber Shop",
-  "short_name": "Flow de Barrio",
-  "description": "Cobro y gestión para Flow de Barrio Barber Shop",
+  "name": "BarberPro · Gestión para barberías",
+  "short_name": "BarberPro",
+  "description": "Gestión para barberías: cobro, comisiones, gastos y reportes.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
