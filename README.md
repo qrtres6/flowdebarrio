@@ -60,8 +60,14 @@ supabase/schema.sql   tabla para Supabase
 design-handoff/       prototipo estático original (referencia de diseño)
 ```
 
+## Publicar en Google Play Store
+
+La app se puede subir a Play Store envolviéndola como app Android (TWA).
+El paso a paso está en [`GUIA-PLAYSTORE.md`](GUIA-PLAYSTORE.md).
+
 ## Estado actual
 
 - ✅ PWA instalable
 - ✅ Cobro, Admin y reportes funcionando
 - ✅ Sincronización opcional con Supabase (tiempo real entre dispositivos)
+- ✅ Lista para empaquetar y subir a Google Play Store
