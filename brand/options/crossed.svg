@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.45" y2="1">
+      <stop offset="0" stop-color="#262017"/>
+      <stop offset="1" stop-color="#0A0807"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F2D690"/>
+      <stop offset="0.5" stop-color="#D4A857"/>
+      <stop offset="1" stop-color="#A67D34"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <rect x="36" y="36" width="440" height="440" rx="108" fill="none" stroke="#D4A857" stroke-opacity="0.22" stroke-width="4"/>
+
+  <g transform="rotate(-40 256 256) translate(256 256) scale(0.82) translate(-256 -256)">
+    <rect x="104" y="216" width="304" height="32" rx="15" fill="url(#gold)"/>
+    <g fill="url(#gold)">
+      <rect x="118" y="244" width="11" height="52" rx="5"/>
+      <rect x="144" y="244" width="11" height="52" rx="5"/>
+      <rect x="170" y="244" width="11" height="52" rx="5"/>
+      <rect x="196" y="244" width="11" height="52" rx="5"/>
+      <rect x="222" y="244" width="11" height="52" rx="5"/>
+      <rect x="248" y="244" width="11" height="52" rx="5"/>
+      <rect x="274" y="244" width="11" height="52" rx="5"/>
+      <rect x="300" y="244" width="11" height="52" rx="5"/>
+      <rect x="326" y="244" width="11" height="52" rx="5"/>
+      <rect x="352" y="244" width="11" height="52" rx="5"/>
+      <rect x="378" y="244" width="11" height="52" rx="5"/>
+    </g>
+  </g>
+
+  <g transform="rotate(42 256 256) translate(256 280) scale(0.78) translate(-256 -280)">
+    <line x1="214" y1="368" x2="252" y2="312" stroke="url(#gold)" stroke-width="30" stroke-linecap="round"/>
+    <line x1="298" y1="368" x2="260" y2="312" stroke="url(#gold)" stroke-width="30" stroke-linecap="round"/>
+    <path d="M238 318 L266 300 L342 116 Z" fill="url(#gold)"/>
+    <path d="M274 318 L246 300 L170 116 Z" fill="url(#gold)"/>
+    <circle cx="190" cy="400" r="44" fill="none" stroke="url(#gold)" stroke-width="24"/>
+    <circle cx="322" cy="400" r="44" fill="none" stroke="url(#gold)" stroke-width="24"/>
+    <circle cx="256" cy="306" r="22" fill="url(#gold)"/>
+    <circle cx="256" cy="306" r="8" fill="#1A150D"/>
+  </g>
+</svg>
