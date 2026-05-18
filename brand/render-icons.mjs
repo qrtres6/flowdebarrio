@@ -1,6 +1,7 @@
-// Renders the app icons from brand/source-icon.jpg into public/.
+// Renders the app icons and Play Store assets from brand/source-icon.jpg.
 // Recolors the grayscale logo to a gold duotone, recenters it on a
-// black tile, and exports every size the PWA / Play Store needs.
+// black tile, and exports every size the PWA / Play Store needs plus
+// the 1024x500 feature graphic.
 // Run with: node brand/render-icons.mjs   (needs `npm i -D sharp`)
 import sharp from 'sharp';
 import { fileURLToPath } from 'url';
@@ -104,3 +105,21 @@ for (const t of targets) {
   await (await tile(t.size, t.frac)).toFile(t.file);
   console.log('wrote', t.file, t.size + 'px');
 }
+
+// 4. Play Store feature graphic (1024x500): logo centered on a dark
+//    tile with a soft gold glow and a thin gold frame.
+const FG_W = 1024, FG_H = 500;
+const fgBg = Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="${FG_W}" height="${FG_H}">
+  <rect width="${FG_W}" height="${FG_H}" fill="rgb(8,6,3)"/>
+  <rect x="18" y="18" width="${FG_W - 36}" height="${FG_H - 36}" rx="22"
+        fill="none" stroke="#D4A857" stroke-opacity="0.3" stroke-width="3"/>
+</svg>`);
+const fgH = 404;
+const fgScale = fgH / bh;
+const fgW = Math.round(bw * fgScale);
+const fgLogo = await sharp(content).resize(fgW, fgH).toBuffer();
+await sharp(fgBg)
+  .composite([{ input: fgLogo, left: Math.round((FG_W - fgW) / 2), top: Math.round((FG_H - fgH) / 2) }])
+  .png()
+  .toFile('brand/playstore-feature-1024x500.png');
+console.log('wrote brand/playstore-feature-1024x500.png 1024x500px');

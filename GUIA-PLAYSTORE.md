@@ -87,9 +87,9 @@ Esto hace que la app abra a pantalla completa, sin la barra del navegador.
 3. Subí el archivo `app-release-signed.aab` del `.zip`.
 4. Completá la ficha de la tienda (te lo va pidiendo Play Console):
    - Descripción corta y larga.
-   - **Ícono** 512×512 → usá `public/icon-512.png` de este repo.
+   - **Ícono** 512×512 → usá `brand/playstore-icon-512.png` de este repo.
    - **Capturas de pantalla** del celular (mínimo 2) → sacalas abriendo la app.
-   - Gráfico destacado 1024×500.
+   - **Gráfico destacado** 1024×500 → usá `brand/playstore-feature-1024x500.png`.
    - Clasificación de contenido, política de privacidad, datos de contacto.
 
 ---
